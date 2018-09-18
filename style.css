@@ -1,41 +1,79 @@
-body {
+
+*{
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding:0;
+
+  font: normal 18px/1.4 "open sans";
+
+}
+main{
+
+
+}
+nav{
+  display:block;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding:1em;
+}
+nav ul{
+  display:inline-block;
+  margin: 0;
+}
+nav ul li{
+  display:inline-block;
+}
+nav > a{
+  margin-left: 2em;
+}
+header {
   background: #ffd700;
-  width: 100%;
-  padding-right: 200px;
-  color: white;
+  background: bottom center url("assets/eye_film_museum_004_photo_by_ralph_richter.jpg"); /* © eye filmmuseum */
+  /background: top center url("assets/denisguzzo_eye_exterior_view-3765_hr.jpg"); /* © eye filmmuseum */
+  /background: bottom center url("assets/eye_dmaa_12-03_2639_-_photo_iwan_baan_online_usage_add_link_to_www.iwan_.com2_.jpg"); /* © eye filmmuseum */
+  /background: bottom center url("assets/final_eye_2017_300dpi_2.jpg"); /* © Marcus Köppen */
+
+  background-size: cover;
+}
+header, section, footer{
+    height:80vh;
+    margin: 0;
+    padding:1em;
+    overflow-x: scroll;
 }
 
-@media (min-width: 900px) {
-  body {
-    background: #F2D11F;
-	max-width: 600px;
-	margin-left: 25%;
-	margin-right: 25%;
-  }
+section#talks {
+  background: #ffae00;
+  display:flex;
+
+}
+section#talks article{
+  background: white;
+  margin:1em;
+  width: 60vw;
 }
 
-nav li{
-	/*list-style-type: none;*/
-	display: inline;
-	padding: 1em;
+section#programme {
+  background: #ffd700;
 }
 
-#tickets{
-	position: absolute;
-	top: 1em;
-	right: 1em;
-
-    background-color: #791BA1; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
+section#workshops {
+  background: blue;
 }
 
-/*Argh tried to crop the top of the image but CSS doesn't work that way*/
-#eyeImg{
-	padding-top: "-400px";
-	width: 100%;
+section#venue {
+  background: #ffae00;
+}
+
+footer#contact {
+  background: #ffd700;
 }
