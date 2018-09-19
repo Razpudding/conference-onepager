@@ -40,6 +40,7 @@ nav{
   justify-content: center;
   align-items: center;
   align-content:space-between;
+  overflow-x: scroll;
 }
 nav ul{
   display:inline-block;
@@ -75,14 +76,25 @@ header {
   xflex-wrap: wrap;
 }
 header h1{
-  display: inline-block;
-  font-size: 12vw;
-  xword-break: break-all;
-  xwidth: 40vw;
+  display: block;
+  font-family: "open sans", arial, sans-serif;
+  xfont-weight: bold;
+  letter-spacing: -0.03em;
+  font-size: 13vw;
   line-height: 80%;
   margin: 6rem 0 0 0;
   padding: 0;
-  xbackground: pink;
+}
+header div{
+  position: absolute;
+  font-family: georgia, times, serif;
+  font-weight: normal;
+  letter-spacing: 0;
+  font-size: 13vw;
+  line-height: 80%;
+  margin: -1.6em 0 0 0;
+  padding: 0;
+  color: var(--geel-main);
 }
 header h1 a{
   text-decoration: none;
@@ -111,16 +123,19 @@ header, section, footer{
     overflow-x: scroll;
 }
 section h2, footer h2{
-  display: inline-block;
-  font-size: 2em;
-  margin-top: 6rem;
-  padding: 0.3rem;
-  border: solid 0.2rem black;
-}
-section p, footer p{
+  display: block;
   font-size: 12vw;
   line-height: 80%;
-  margin:0;
+  margin: 6rem 0 0 0;
+  padding: 0;
+}
+section > p, footer > p{
+  display: inline-block;
+  font-size: 1.4em;
+  max-width: 30rem;
+  padding: 1rem;
+  margin: 0 0 0 0.5rem;
+  border: solid 0.2rem black;
 }
 section#talks {
   background: var(--geel-secundary);;
