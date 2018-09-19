@@ -1,3 +1,9 @@
+/* kleuren */
+:root {
+  --geel-main: #FFF021;
+  --geel-secundary: #ffd700;
+}
+
 
 *{
   scroll-behavior: smooth;
@@ -7,73 +13,138 @@
 body{
   margin: 0;
   padding:0;
-
   font: normal 18px/1.4 "open sans";
-
+  color: black;
+}
+a{
+  color: black;
 }
 main{
 
 
 }
+/* Navigatie
+Blijft altijd helemaal bovenaan staan
+*/
 nav{
-  display:block;
+  xdisplay:block;
   position: fixed;
   top:0;
   left:0;
   width:100%;
-  background:rgba(255, 255, 255, 0.5);
+  height: 3rem;
+  background:rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding:1em;
+  xpadding:1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content:space-between;
 }
 nav ul{
   display:inline-block;
   margin: 0;
+  display: flex;
+  xjustify-content: center;
+  xalign-items: center;
+  align-content:space-between;
 }
 nav ul li{
   display:inline-block;
+  margin: 0 1em;
 }
 nav > a{
   margin-left: 2em;
+  xalign-self: flex-end;
 }
-header {
-  background: #ffd700;
-  background: bottom center url("assets/eye_film_museum_004_photo_by_ralph_richter.jpg"); /* © eye filmmuseum */
-  /background: top center url("assets/denisguzzo_eye_exterior_view-3765_hr.jpg"); /* © eye filmmuseum */
-  /background: bottom center url("assets/eye_dmaa_12-03_2639_-_photo_iwan_baan_online_usage_add_link_to_www.iwan_.com2_.jpg"); /* © eye filmmuseum */
-  /background: bottom center url("assets/final_eye_2017_300dpi_2.jpg"); /* © Marcus Köppen */
+nav a{
+  color:white;
+}
+nav img{
+  height: 2em;
+}
 
-  background-size: cover;
+/* header
+Met intro tekst over het congres en beeldmerk
+*/
+header {
+  background: var(--geel-main);
+  color: black;
+  xdisplay: flex;
+  xalign-items: flex-start;
+  xflex-wrap: wrap;
+}
+header h1{
+  display: inline-block;
+  font-size: 12vw;
+  xword-break: break-all;
+  xwidth: 40vw;
+  line-height: 80%;
+  margin: 6rem 0 0 0;
+  padding: 0;
+  xbackground: pink;
+}
+header h1 a{
+  text-decoration: none;
+  color: black;
+}
+header p{
+  display: inline-block;
+  font-size: 1.4em;
+  max-width: 30rem;
+  padding: 1rem;
+  margin: 0 0 0 0.5rem;
+  border: solid 0.2rem black;
+}
+header img{
+  display: inline-block;
+  width: 20rem;
+  height: 14rem;
+  background: black;
+  padding: 0.2rem;
+  margin:-0.2rem 0 0 -0.5rem;
 }
 header, section, footer{
-    height:80vh;
+    min-height:100vh;
     margin: 0;
     padding:1em;
     overflow-x: scroll;
 }
-
+section h2, footer h2{
+  display: inline-block;
+  font-size: 2em;
+  margin-top: 6rem;
+  padding: 0.3rem;
+  border: solid 0.2rem black;
+}
+section p, footer p{
+  font-size: 12vw;
+  line-height: 80%;
+  margin:0;
+}
 section#talks {
-  background: #ffae00;
-  display:flex;
+  background: var(--geel-secundary);;
 
 }
 section#talks article{
-  background: white;
   margin:1em;
   width: 60vw;
 }
 
-section#programme {
-  background: #ffd700;
+section#workshops {
+  background: var(--geel-main);;
 }
 
-section#workshops {
-  background: blue;
+
+section#programme {
+  background: var(--geel-secundary);;
 }
+
 
 section#venue {
-  background: #ffae00;
+  background: var(--geel-main);;
 }
 
 footer#contact {
-  background: #ffd700;
+  background: var(--geel-secundary);;
 }
