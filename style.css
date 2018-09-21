@@ -19,13 +19,6 @@ body{
 a{
   color: black;
 }
-#tickets{
-  padding:0.4rem 0.6rem;
-  background: #0DFF4D;
-  color: black;
-  border-radius: 0.4rem;
-  text-decoration: none;
-}
 main{
 
 
@@ -34,73 +27,94 @@ main{
 Blijft altijd helemaal bovenaan staan
 */
 nav{
-  xdisplay:block;
   position: fixed;
   top:0;
   left:0;
-  width:100%;
-  height: 3rem;
-  background:rgba(0, 0, 0, 0.5);
-  text-align: center;
-  xpadding:1em;
+  display:block;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content:space-between;
-  overflow-x: scroll;
+  xalign-content:space-between;
+  xoverflow-x: scroll;
+  width: 100%;
+  height: 4rem;
+  padding: 0;
+  margin: 0;
+  background:rgba(0, 0, 0, 0.9);
+}
+nav img{
+  height: 2em;
 }
 nav ul{
   display:inline-block;
-  margin: 0;
-  display: flex;
+  xdisplay: flex;
   xjustify-content: center;
   xalign-items: center;
-  align-content:space-between;
+  xalign-content:space-between;
+  xwidth: 30em;
+  margin: 0;
+  padding: 0;
+  xbackground: pink;
 }
 nav ul li{
   display:inline-block;
-  margin: 0 1em;
+  margin: 0;
+  padding: 0 0.4rem;
+  xbackground: yellow;
 }
 nav > a{
-  margin-left: 2em;
+  display:inline-block;
+  margin: 0;
   xalign-self: flex-end;
 }
 nav a{
   color:white;
 }
-nav img{
-  height: 2em;
+#tickets{ /* <a> link voor tickets verkoop - altijd in de header*/
+  display: inline-block;
+  xposition: absolute;
+  xtop: 0.8rem;
+  xright: 0.8rem;
+  margin: 0 0 0 1rem;
+  padding:0.4rem 0.6rem;
+  background: #0DFF4D;
+  color: black;
+  border-radius: 0.4rem;
+  text-decoration: none;
 }
 
 /* header
-Met intro tekst over het congres en beeldmerk
+Met intro tekst over het congres,
+fotootje van het EYE
+en het beeldmerk
 */
 header {
-  background: var(--geel-main);
-  color: black;
   xdisplay: flex;
   xalign-items: flex-start;
   xflex-wrap: wrap;
+  background: var(--geel-main);
+  color: black;
 }
 header h1{
   display: block;
-  font-family: "open sans", arial, sans-serif;
-  xfont-weight: bold;
-  letter-spacing: -0.03em;
-  font-size: 13vw;
-  line-height: 80%;
   margin: 6rem 0 0 0;
   padding: 0;
+  font-family: "open sans", arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  font-size: 14vw;
+  line-height: 80%;
 }
+/* dit is de div voor het extra font design */
 header div{
   position: absolute;
-  font-family: georgia, times, serif;
-  font-weight: normal;
-  letter-spacing: 0;
-  font-size: 13vw;
-  line-height: 80%;
   margin: -1.6em 0 0 0;
   padding: 0;
+  font-family: georgia, times, serif;
+  font-weight: normal;
+  xletter-spacing: 0;
+  font-size: 15vw;
+  line-height: 80%;
   color: var(--geel-main);
 }
 header h1 a{
@@ -109,64 +123,116 @@ header h1 a{
 }
 header p{
   display: inline-block;
-  font-size: 1.4em;
   max-width: 30rem;
-  padding: 1rem;
   margin: 0 0 0 0.5rem;
-  border: solid 0.2rem black;
+  padding: 1rem;
+  font-size: 1.4em;
+  xborder: solid 0.2rem black;
 }
 header img{
   display: inline-block;
   width: 20rem;
   height: 14rem;
-  background: black;
-  padding: 0.2rem;
   margin:-0.2rem 0 0 -0.5rem;
+  padding: 0.2rem;
+  background: black;
 }
 header, section, footer{
-    min-height:100vh;
-    margin: 0;
-    padding:1em;
-    overflow-x: scroll;
+  min-height:100vh;
+  overflow-x: scroll;
+  margin: 0;
+  padding:1em;
 }
+
+/*
+Sections
+Met alle content
+talks, workshops, programme
+venue en contact
+*/
+section:nth-child(even){ background: var(--geel-main); }
+section:nth-child(odd){ background: var(--geel-secundary);}
+
 section h2, footer h2{
   display: block;
-  font-size: 12vw;
-  line-height: 80%;
   margin: 6rem 0 0 0;
   padding: 0;
+  font-size: 12vw;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  line-height: 80%;
 }
+/* dit is de div voor het extra font design */
+section:nth-child(even) div{ color: var(--geel-main); }
+section:nth-child(odd) div{ color: var(--geel-secundary);}
+section div, footer div{
+  position: absolute;
+  margin: -0.82em 0 0 0;
+  padding: 0;
+  font-family: georgia, times, serif;
+  font-weight: normal;
+  letter-spacing: 0.4rem;
+  font-size: 12vw;
+  line-height: 80%;
+}
+/* eerste paragraaf met kader - cmd style */
+section:nth-child(even) > p{ color: var(--geel-main); }
+section:nth-child(odd) > p{ color: var(--geel-secundary);}
 section > p, footer > p{
   display: inline-block;
-  font-size: 1.4em;
+  margin: -0.2rem 0 0 0.5rem;
+  padding: 0.8rem 0.4rem;
   max-width: 30rem;
-  padding: 1rem;
-  margin: 0 0 0 0.5rem;
+  font-size: 1.3em;
   border: solid 0.2rem black;
+  background:black;
+  color: var(--geel-main);
 }
+/*
+TALKS
+met 3keynotes
+*/
 section#talks {
-  background: var(--geel-secundary);;
-
 }
 section#talks article{
-  margin:1em;
   width: 60vw;
+  margin:1em;
 }
-
+/*
+WORKSHOPS
+met ...
+*/
 section#workshops {
-  background: var(--geel-main);;
+
 }
-
-
+/*
+PROGRAMMA
+Tabel met titels, tijden en locaties
+*/
 section#programme {
-  background: var(--geel-secundary);;
+
+}
+section#programme table{
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+section#programme table td{
+  padding: 0.4rem;
+  border: solid 0.2rem black;
 }
 
 
+/*
+VENUE
+iets over het eye, en hoe je er moet komen
+*/
 section#venue {
-  background: var(--geel-main);;
-}
 
-footer#contact {
-  background: var(--geel-secundary);;
 }
+/*
+FOOTER
+met contact gegevens, mail adres
+Organiasator, cmd logo en hva logo
+Misschien sponsors?
+*/
+footer { background: grey;}
