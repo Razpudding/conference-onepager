@@ -203,6 +203,7 @@ TALKS
 met 3keynotes
 */
 section#talks {
+  overflow-x: hidden;
 }
 section#talks ul{
   list-style: none;
@@ -235,6 +236,26 @@ section#talks li h3 {
   background:black;
   color: var(--geel-secundary);
 }
+/* breakpint voor smallemobiele schermen en de scheve talks layout */
+@media (max-width: 400px) {
+    section#talks li{
+      max-width: 20rem;
+      margin: 0;
+    }
+    section#talks li img{
+      width: 16rem;
+      margin: 0 0 0 4rem;
+    }
+    section#talks li h3 {
+      width: 14rem;
+      margin: 10rem 0 0 0;
+      padding: 0.4rem;
+    }
+    section#talks p{
+      width: 16em;
+    }
+}
+
 
 /*
 WORKSHOPS
