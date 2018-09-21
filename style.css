@@ -19,6 +19,13 @@ body{
 a{
   color: black;
 }
+#tickets{
+  padding:0.4rem 0.6rem;
+  background: #0DFF4D;
+  color: black;
+  border-radius: 0.4rem;
+  text-decoration: none;
+}
 main{
 
 
