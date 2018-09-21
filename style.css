@@ -67,7 +67,7 @@ nav ul{
   xalign-content:space-between;
   xwidth: 30em;
   margin: 0;
-  padding: 0;
+  padding: 0.4rem 0;
   xbackground: pink;
 }
 nav ul li{
@@ -112,7 +112,7 @@ header h1{
   padding: 0;
   font-family: "open sans", helvetica, arial, sans-serif;
   font-weight: bold;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.1em;
   font-size: 14vw;
   line-height: 80%;
 }
@@ -123,10 +123,11 @@ header div{
   padding: 0;
   font-family: georgia, times, serif;
   font-weight: normal;
-  letter-spacing: 0.1rem;
+  letter-spacing: -0.15rem;
   font-size: 14vw;
   line-height: 80%;
   color: var(--geel-main);
+  xcolor: pink;
 }
 header h1 a{
   text-decoration: none;
@@ -143,7 +144,7 @@ header p{
 }
 header img{
   display: inline-block;
-  width: 20rem;
+  width: 19rem;
   height: 14rem;
   margin: 1rem 0 0 -0.5rem;
   padding: 0.2rem;
