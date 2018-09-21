@@ -13,7 +13,7 @@
 body{
   margin: 0;
   padding:0;
-  font: normal 18px/1.4 "open sans";
+  font: normal 18px/1.4 "open sans", helvetica, arial, sans-serif;;
   color: black;
 }
 a{
@@ -37,14 +37,14 @@ nav{
   xalign-content:space-between;
   xoverflow-x: scroll;
   width: 100%;
-  height: 4rem;
+  min-height: 4rem;
   padding: 0;
   margin: 0;
   background:rgba(0, 0, 0, 0.9);
 }
 nav img{
   xheight: 2em;
-  margin: 0 1rem 0 0;
+  margin: 0 0.6rem 0 0.6rem;
 }
 nav ul{
   display:inline-block;
@@ -78,7 +78,7 @@ nav a{
   xposition: absolute;
   xtop: 0.8rem;
   xright: 0.8rem;
-  margin: 0 0 0 1rem;
+  margin: 0 0.6rem 0 0.6rem;
   padding:0.4rem 0.6rem;
   background: #0DFF4D;
   color: black;
@@ -102,7 +102,7 @@ header h1{
   display: block;
   margin: 6rem 0 0 0;
   padding: 0;
-  font-family: "open sans", arial, sans-serif;
+  font-family: "open sans", helvetica, arial, sans-serif;
   font-weight: bold;
   letter-spacing: -0.03em;
   font-size: 14vw;
@@ -179,14 +179,14 @@ section div, footer div{
   line-height: 80%;
 }
 /* eerste paragraaf met kader - cmd style */
-section:nth-child(odd) > p{ color: var(--geel-main); }
-section:nth-child(even) > p{ color: var(--geel-secundary);}
-section > p, footer > p{
+section:nth-child(odd) > p:first-of-type { color: var(--geel-main); }
+section:nth-child(even) > p:first-of-type { color: var(--geel-secundary);}
+section > p:first-of-type, footer > p:first-of-type{
   display: inline-block;
   margin: -0.2rem 0 0 0.5rem;
   padding: 0.8rem 0.4rem;
   max-width: 30rem;
-  font-size: 1.3em;
+  font-size: 1.1em;
   border: solid 0.2rem black;
   background:black;
   color: var(--geel-main);
@@ -238,4 +238,9 @@ met contact gegevens, mail adres
 Organiasator, cmd logo en hva logo
 Misschien sponsors?
 */
-footer { background: grey;}
+footer {
+  background: grey;
+}
+footer > p:first-of-type{
+  color: white;
+}
