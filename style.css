@@ -32,9 +32,8 @@ nav{
   left:0;
   display:block;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  xalign-content:space-between;
   xoverflow-x: scroll;
   width: 100%;
   min-height: 4rem;
@@ -43,6 +42,7 @@ nav{
   background:rgba(0, 0, 0, 0.9);
 }
 nav img{
+  display:inline-block;
   xheight: 2em;
   margin: 0 0.6rem 0 0.6rem;
 }
@@ -62,11 +62,6 @@ nav ul li{
   margin: 0;
   padding: 0 0.4rem;
   xbackground: yellow;
-}
-nav > a{
-  display:inline-block;
-  margin: 0;
-  xalign-self: flex-end;
 }
 nav a{
   color:white;
@@ -111,12 +106,12 @@ header h1{
 /* dit is de div voor het extra font design */
 header div{
   position: absolute;
-  margin: -1.6em 0 0 0;
+  margin: -2.35em 0 0 0;
   padding: 0;
   font-family: georgia, times, serif;
   font-weight: normal;
-  xletter-spacing: 0;
-  font-size: 15vw;
+  letter-spacing: 0.075rem;
+  font-size: 14vw;
   line-height: 80%;
   color: var(--geel-main);
 }
@@ -127,16 +122,17 @@ header h1 a{
 header p{
   display: inline-block;
   max-width: 30rem;
-  margin: 0 0 0 0.5rem;
-  padding: 1rem;
-  font-size: 1.4em;
+  margin: 1rem 0 0 0.5rem;
+  padding: 0.8rem;
+  xfont-size: 1.1em;
+  vertical-align: top; /* voor de inline-block, bovenin uitlijnen */
   xborder: solid 0.2rem black;
 }
 header img{
   display: inline-block;
   width: 20rem;
   height: 14rem;
-  margin:-0.2rem 0 0 -0.5rem;
+  margin: 1rem 0 0 -0.5rem;
   padding: 0.2rem;
   background: black;
 }
@@ -174,7 +170,7 @@ section div, footer div{
   padding: 0;
   font-family: georgia, times, serif;
   font-weight: normal;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.1rem;
   font-size: 12vw;
   line-height: 80%;
 }
@@ -184,9 +180,10 @@ section:nth-child(even) > p:first-of-type { color: var(--geel-secundary);}
 section > p:first-of-type, footer > p:first-of-type{
   display: inline-block;
   margin: -0.2rem 0 0 0.5rem;
-  padding: 0.8rem 0.4rem;
+  padding: 0.4rem;
   max-width: 30rem;
-  font-size: 1.1em;
+  xfont-size: 1.1em;
+  letter-spacing: 0;
   border: solid 0.2rem black;
   background:black;
   color: var(--geel-main);
