@@ -153,8 +153,8 @@ Met alle content
 talks, workshops, programme
 venue en contact
 */
-section:nth-child(even){ background: var(--geel-main); }
-section:nth-child(odd){ background: var(--geel-secundary);}
+section:nth-child(odd){ background: var(--geel-main); }
+section:nth-child(even){ background: var(--geel-secundary);}
 
 section h2, footer h2{
   display: block;
@@ -166,8 +166,8 @@ section h2, footer h2{
   line-height: 80%;
 }
 /* dit is de div voor het extra font design */
-section:nth-child(even) div{ color: var(--geel-main); }
-section:nth-child(odd) div{ color: var(--geel-secundary);}
+section:nth-child(odd) div{ color: var(--geel-main); }
+section:nth-child(even) div{ color: var(--geel-secundary);}
 section div, footer div{
   position: absolute;
   margin: -0.82em 0 0 0;
@@ -179,8 +179,8 @@ section div, footer div{
   line-height: 80%;
 }
 /* eerste paragraaf met kader - cmd style */
-section:nth-child(even) > p{ color: var(--geel-main); }
-section:nth-child(odd) > p{ color: var(--geel-secundary);}
+section:nth-child(odd) > p{ color: var(--geel-main); }
+section:nth-child(even) > p{ color: var(--geel-secundary);}
 section > p, footer > p{
   display: inline-block;
   margin: -0.2rem 0 0 0.5rem;
