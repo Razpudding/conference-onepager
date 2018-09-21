@@ -16,13 +16,25 @@ body{
   font: normal 18px/1.4 "open sans", helvetica, arial, sans-serif;;
   color: black;
 }
+main{
+
+}
+header, section, footer{
+  min-height:100vh;
+  overflow-x: scroll;
+  margin: 0;
+  padding:1em;
+}
 a{
   color: black;
 }
-main{
-
-
+a.next{
+  display: block;
+  width: 8rem;
+  margin: 2rem auto;
+  text-align: center;
 }
+
 /* Navigatie
 Blijft altijd helemaal bovenaan staan
 */
@@ -47,6 +59,7 @@ nav img{
   margin: 0 0.6rem 0 0.6rem;
 }
 nav ul{
+  list-style: none;
   display:inline-block;
   xdisplay: flex;
   xjustify-content: center;
@@ -136,12 +149,6 @@ header img{
   padding: 0.2rem;
   background: black;
 }
-header, section, footer{
-  min-height:100vh;
-  overflow-x: scroll;
-  margin: 0;
-  padding:1em;
-}
 
 /*
 Sections
@@ -174,7 +181,7 @@ section div, footer div{
   font-size: 12vw;
   line-height: 80%;
 }
-/* eerste paragraaf met kader - cmd style */
+/* eerste paragraaf met kader - cmd stylie */
 section:nth-child(odd) > p:first-of-type { color: var(--geel-main); }
 section:nth-child(even) > p:first-of-type { color: var(--geel-secundary);}
 section > p:first-of-type, footer > p:first-of-type{
@@ -188,16 +195,47 @@ section > p:first-of-type, footer > p:first-of-type{
   background:black;
   color: var(--geel-main);
 }
+section p, footer p{
+  max-width: 30em;
+}
 /*
 TALKS
 met 3keynotes
 */
 section#talks {
 }
-section#talks article{
-  width: 60vw;
-  margin:1em;
+section#talks ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+section#talks li{
+  xposition: relative;
+  display: inline-block;
+  max-width: 24rem;
+  margin: 1rem;
+  xbackground: pink;
+}
+section#talks li img{
+  float: right;
+  width: 16rem;
+  margin: 0 0 0 7rem;
+  padding: 0.2rem;
+  background: black;
+}
+section#talks li h3 {
+  xdisplay: block;
+  width: 14rem;
+  margin: 10rem 0 0 0;
+  padding: 0.4rem;
+  xfont-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 0;
+  border: solid 0.2rem black;
+  background:black;
+  color: var(--geel-secundary);
+}
+
 /*
 WORKSHOPS
 met ...
