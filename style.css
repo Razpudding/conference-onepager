@@ -43,7 +43,8 @@ nav{
   background:rgba(0, 0, 0, 0.9);
 }
 nav img{
-  height: 2em;
+  xheight: 2em;
+  margin: 0 1rem 0 0;
 }
 nav ul{
   display:inline-block;
@@ -69,6 +70,8 @@ nav > a{
 }
 nav a{
   color:white;
+  font-size: 0.85em;
+  letter-spacing: 0.05rem;
 }
 #tickets{ /* <a> link voor tickets verkoop - altijd in de header*/
   display: inline-block;
