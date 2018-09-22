@@ -111,6 +111,7 @@ header {
   xflex-wrap: wrap;
   background: var(--geel-main);
   color: black;
+  overflow-x: hidden;
 }
 header h1{
   display: block;
@@ -152,8 +153,8 @@ header p{
 }
 header img{
   display: inline-block;
-  width: 19rem;
-  height: 14rem;
+  max-width: 26rem;
+  xheight: 14rem;
   margin: 1rem 0 0 -0.5rem;
   padding: 0.2rem;
   background: black;
@@ -170,7 +171,7 @@ section:nth-child(even){ background: var(--geel-secundary);}
 
 section h2, footer h2{
   display: block;
-  margin: 4.5rem 0 0 0;
+  margin: 6rem 0 0 0;
   padding: 0;
   font-size: 16vw;
   font-weight: bold;
@@ -305,7 +306,7 @@ Organiasator, cmd logo en hva logo
 Misschien sponsors?
 */
 footer {
-  background: grey;
+  background: #efefef;
 }
 footer > p:first-of-type{
   color: white;
