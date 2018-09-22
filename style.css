@@ -18,10 +18,11 @@ body{
   color: black;
 }
 main{
-
+  width: 100%;
 }
 header, section, footer{
   min-height:100vh;
+  width: 100%;
   overflow-x: scroll;
   margin: 0;
   padding:1em;
@@ -47,7 +48,7 @@ nav{
   position: fixed;
   top:0;
   left:0;
-  display:block;
+  display: block;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -259,7 +260,7 @@ section#workshops ul{
 section#workshops li{
   display: inline-block;
   width: 18rem;
-  height: 20rem;
+  height: 16rem;
   margin: 1rem;
   padding: 1rem;
   background: black;
@@ -277,11 +278,15 @@ section#programme {
 
 }
 section#programme table{
-  margin: 1em auto;
+  margin: 1em;
   border-collapse: collapse;
 }
+section#programme table tr:first-of-type{
+  position: sticky;
+  top: 3rem;
+}
 section#programme table td{
-  padding: 0.4rem;
+  padding: 0.5rem;
   border: solid 0.2rem black;
 }
 
@@ -334,5 +339,8 @@ en de header p iets smaller,anders is het zonde van de ruimte
     }
     section#workshops li{
       margin: 1rem 0;
+    }
+    section#programme table{
+      margin: 1em 0;
     }
 }
