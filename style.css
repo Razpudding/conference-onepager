@@ -3,13 +3,14 @@
   --geel-main: #FFF021;
   --geel-secundary: #ffd700;
 }
-
-
 *{
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
+/*
+basic layout
+*/
 body{
   margin: 0;
   padding:0;
@@ -29,9 +30,13 @@ a{
   color: black;
 }
 a.next{
+  xposition: sticky;
+  xtop: 96vh;
   display: block;
   width: 8rem;
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
+  font-size: 0.85em;
+  letter-spacing: 0.05rem;
   text-align: center;
 }
 
@@ -55,7 +60,7 @@ nav{
 }
 nav img{
   display:inline-block;
-  xheight: 2em;
+  height: 3em;
   margin: 0 0.6rem 0 0.6rem;
 }
 nav ul{
@@ -141,7 +146,7 @@ header p{
   margin: 1rem 0 0 0.5rem;
   padding: 0.8rem;
   xfont-size: 1.1em;
-  vertical-align: top; /* voor de inline-block, bovenin uitlijnen */
+  vertical-align: top; /* voor de inline-block, boven uitlijnen */
   xborder: solid 0.2rem black;
 }
 header img{
@@ -228,7 +233,6 @@ section#talks li img{
   background: black;
 }
 section#talks li h3 {
-  xdisplay: block;
   width: 14rem;
   margin: 10rem 0 0 0;
   padding: 0.4rem;
@@ -239,26 +243,6 @@ section#talks li h3 {
   background:black;
   color: var(--geel-secundary);
 }
-/* breakpint voor smallemobiele schermen en de scheve talks layout */
-@media (max-width: 400px) {
-    section#talks li{
-      max-width: 20rem;
-      margin: 0;
-    }
-    section#talks li img{
-      width: 16rem;
-      margin: 0 0 0 4rem;
-    }
-    section#talks li h3 {
-      width: 14rem;
-      margin: 10rem 0 0 0;
-      padding: 0.4rem;
-    }
-    section#talks p{
-      width: 16em;
-    }
-}
-
 
 /*
 WORKSHOPS
@@ -266,6 +250,24 @@ met ...
 */
 section#workshops {
 
+}
+section#workshops ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section#workshops li{
+  display: inline-block;
+  width: 18rem;
+  height: 20rem;
+  margin: 1rem;
+  padding: 1rem;
+  background: black;
+  vertical-align: top;
+  color: var(--geel-main);
+}
+section#workshops li a {
+  color: var(--geel-main);
 }
 /*
 PROGRAMMA
@@ -302,4 +304,35 @@ footer {
 }
 footer > p:first-of-type{
   color: white;
+}
+
+/*
+breakpoint voor smalste mobiele schermen
+de scheve talks layout beetje tweaken
+en de header p iets smaller,anders is het zonde van de ruimte
+*/
+@media (max-width: 400px) {
+    header p{
+      margin: 1rem 0;
+      padding: 0;
+    }
+    section#talks li{
+      max-width: 20rem;
+      margin: 0;
+    }
+    section#talks li img{
+      width: 16rem;
+      margin: 0 0 0 4rem;
+    }
+    section#talks li h3 {
+      width: 14rem;
+      margin: 10rem 0 0 0;
+      padding: 0.4rem;
+    }
+    section#talks p{
+      width: 16em;
+    }
+    section#workshops li{
+      margin: 1rem 0;
+    }
 }
