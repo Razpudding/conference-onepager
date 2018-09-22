@@ -310,6 +310,10 @@ footer {
 footer > p:first-of-type{
   color: white;
 }
+footer img{
+  margin: 1rem 0;
+  width: 16rem;
+}
 
 /*
 breakpoint voor smalste mobiele schermen
