@@ -118,12 +118,19 @@ header p{
   padding: 0.8rem;
   vertical-align: top; /* voor de inline-block, boven uitlijnen */
 }
-header img{
+header img[title="eye"]{
   display: inline-block;
   max-width: 26rem;
   margin: 1rem 0 0 -0.5rem;
   padding: 0.2rem;
   background: black;
+}
+header img[title="hva"]{
+  /* position: absolute;
+  left: 0;
+  top: 3rem; */
+  margin: 0 0 0 -1.4rem;
+  width: 16rem;
 }
 
 /*
