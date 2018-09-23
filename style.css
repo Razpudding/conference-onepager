@@ -1,7 +1,7 @@
 /* kleuren */
 :root {
-  --geel-main: #FFF021;
-  --geel-secundary: #ffd700;
+  --geel-main: #FFF021; /* rgb(255,240,33) */
+  --geel-secundary: #FFD700; /* rgb(255,215,0) */
 }
 *{
   scroll-behavior: smooth;
@@ -31,8 +31,6 @@ a{
   color: black;
 }
 a.next{
-  xposition: sticky;
-  xtop: 96vh;
   display: block;
   width: 8rem;
   margin: 2rem auto 0 auto;
@@ -52,7 +50,6 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  xoverflow-x: scroll;
   width: 100%;
   min-height: 4rem;
   padding: 0;
@@ -67,20 +64,13 @@ nav img{
 nav ul{
   list-style: none;
   display:inline-block;
-  xdisplay: flex;
-  xjustify-content: center;
-  xalign-items: center;
-  xalign-content:space-between;
-  xwidth: 30em;
   margin: 0;
   padding: 0.4rem 0;
-  xbackground: pink;
 }
 nav ul li{
   display:inline-block;
   margin: 0;
   padding: 0 0.4rem;
-  xbackground: yellow;
 }
 nav a{
   color:white;
@@ -89,9 +79,6 @@ nav a{
 }
 #tickets{ /* <a> link voor tickets verkoop - altijd in de header*/
   display: inline-block;
-  xposition: absolute;
-  xtop: 0.8rem;
-  xright: 0.8rem;
   margin: 0 0.6rem 0 0.6rem;
   padding:0.4rem 0.6rem;
   background: #0DFF4D;
@@ -106,9 +93,6 @@ fotootje van het EYE
 en het beeldmerk
 */
 header {
-  xdisplay: flex;
-  xalign-items: flex-start;
-  xflex-wrap: wrap;
   background: var(--geel-main);
   color: black;
   overflow-x: hidden;
@@ -123,21 +107,6 @@ header h1{
   font-size: 15vw;
   line-height: 80%;
 }
-/* dit is de div voor het extra font design */
-header div{
-  position: absolute;
-  margin: -2.35em 0 0 0;
-  padding: 0;
-  font-family: georgia, times, serif;
-  font-weight: normal;
-  letter-spacing: -0.15rem;
-  font-size: 15vw;
-  line-height: 80%;
-  color: var(--geel-main);
-  xcolor: black;
-  xcolor: rgba(0,0,0,0.7);
-  xcolor: rgba(255,244,58,0.8);
-}
 header h1 a{
   text-decoration: none;
   color: black;
@@ -147,14 +116,11 @@ header p{
   max-width: 30rem;
   margin: 1rem 0 0 0.5rem;
   padding: 0.8rem;
-  xfont-size: 1.1em;
   vertical-align: top; /* voor de inline-block, boven uitlijnen */
-  xborder: solid 0.2rem black;
 }
 header img{
   display: inline-block;
   max-width: 26rem;
-  xheight: 14rem;
   margin: 1rem 0 0 -0.5rem;
   padding: 0.2rem;
   background: black;
@@ -178,19 +144,7 @@ section h2, footer h2{
   letter-spacing: -0.03em;
   line-height: 80%;
 }
-/* dit is de div voor het extra font design */
-section:nth-child(odd) div{ color: var(--geel-main); }
-section:nth-child(even) div{ color: var(--geel-secundary);}
-section div, footer div{
-  position: absolute;
-  margin: -0.76em 0 0 0;
-  padding: 0;
-  font-family: georgia, times, serif;
-  font-weight: normal;
-  letter-spacing: 0.26rem;
-  font-size: 16vw;
-  line-height: 80%;
-}
+
 /* eerste paragraaf met kader - cmd stylie */
 section:nth-child(odd) > p:first-of-type { color: var(--geel-main); }
 section:nth-child(even) > p:first-of-type { color: var(--geel-secundary);}
@@ -199,7 +153,6 @@ section > p:first-of-type, footer > p:first-of-type{
   margin: -0.2rem 0 0 0.5rem;
   padding: 0.4rem;
   max-width: 30rem;
-  xfont-size: 1.1em;
   letter-spacing: 0;
   border: solid 0.2rem black;
   background:black;
@@ -221,11 +174,9 @@ section#talks ul{
   padding: 0;
 }
 section#talks li{
-  xposition: relative;
   display: inline-block;
   max-width: 24rem;
   margin: 1rem;
-  xbackground: pink;
 }
 section#talks li img{
   float: right;
@@ -238,7 +189,6 @@ section#talks li h3 {
   width: 14rem;
   margin: 10rem 0 0 0;
   padding: 0.4rem;
-  xfont-size: 1.1em;
   font-weight: normal;
   letter-spacing: 0;
   border: solid 0.2rem black;
@@ -264,7 +214,6 @@ section#workshops li{
   height: 16rem;
   margin: 1rem;
   padding: 1rem;
-  xbackground: black;
   border: solid 0.2rem black;
   vertical-align: top;
   color: black;
@@ -314,6 +263,70 @@ footer img{
   margin: 1rem 0;
   width: 16rem;
 }
+
+
+
+/* Extra font design
+twee fonts door elkaar heen,
+spannings veld tussen digital design & ethics
+*/
+
+/* dit is de div voor het extra font design */
+header h1::before, header h1::after, section h2::after, footer h2::after{
+  display:block;
+  position: absolute;
+  margin: -0.76em 0 0 0;
+  padding: 0;
+  font-family: georgia, times, serif;
+  font-weight: normal;
+  letter-spacing: 0.035em;
+  font-size: 16vw;
+  line-height: 80%;
+}
+header h1::before{
+  content: "Digital Design Ethics";
+  margin-top: 0.04em;
+  letter-spacing: -0.05em;
+  font-size: 15vw;
+  color: var(--geel-main);
+  color: black;
+  color: rgba(0,0,0,0.5);
+}
+header h1::after{
+  content: "conference";
+  margin-top: -0.75em;
+  letter-spacing: 0em;
+  font-size: 15vw;
+  color: var(--geel-main);
+  color: black;
+  color: rgba(0,0,0,0.5);
+}
+section[id="talks"] h2::after{
+  content: "Talks";
+  color: var(--geel-secundary);
+  color: rgba(255,215,0,1);
+}
+section[id="workshops"] h2::after{
+  content: "Workshops";
+  color: var(--geel-main);
+  color: rgba(255,240,33,1);
+}
+section[id="programme"] h2::after{
+  content: "Programme";
+  color: var(--geel-secundary);
+  color: rgba(255,215,0,1);
+}
+section[id="venue"] h2::after{
+  content: "Venue";
+  color: var(--geel-main);
+  color: rgba(255,240,33,1);
+}
+footer[id="contact"] h2::after{
+  content: "Contact";
+  color: black;
+}
+
+
 
 /*
 breakpoint voor smalste mobiele schermen
