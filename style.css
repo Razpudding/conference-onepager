@@ -264,13 +264,12 @@ section#workshops li{
   height: 16rem;
   margin: 1rem;
   padding: 1rem;
-  background: black;
+  xbackground: black;
+  border: solid 0.2rem black;
   vertical-align: top;
-  color: var(--geel-main);
+  color: black;
 }
-section#workshops li a {
-  color: var(--geel-main);
-}
+
 /*
 PROGRAMMA
 Tabel met titels, tijden en locaties
