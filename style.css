@@ -297,7 +297,7 @@ header h1::before{
   font-size: 15vw;
   color: var(--geel-main);
   color: black;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.4);
 }
 header h1::after{
   content: "conference";
@@ -306,7 +306,7 @@ header h1::after{
   font-size: 15vw;
   color: var(--geel-main);
   color: black;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.4);
 }
 section[id="talks"] h2::after{
   content: "Talks";
