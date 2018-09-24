@@ -1,7 +1,4 @@
 # conference-onepager
-Simple onepager for a conference
+Simple onepager for a great conference on Ethics in Digital design
 
-# Todo
-- Add CSS (and mobile first shizzle)
-- Add some pictures to test
-- Add real content
+Not much to mention except that this is a completely js-less, framework-less hand written website.
