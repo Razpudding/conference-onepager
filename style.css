@@ -114,23 +114,32 @@ header h1 a{
 header p{
   display: inline-block;
   max-width: 30rem;
-  margin: 1rem 0 0 0.5rem;
+  margin: 2rem 0 0 0.5rem;
   padding: 0.8rem;
   vertical-align: top; /* voor de inline-block, boven uitlijnen */
 }
-header img[title="eye"]{
-  display: inline-block;
+figure{
+    display: inline-block;
+    margin: 3rem 0 0 0;
+    text-align: center;
+    vertical-align: top; /* voor de inline-block, boven uitlijnen */
+}
+figure[id="eye"] img{
+  /* header img[title="eye"]{ */
   max-width: 26rem;
-  margin: 1rem 0 0 -0.5rem;
   padding: 0.2rem;
   background: black;
 }
-header img[title="hva"]{
+figure figcaption {
+  font-size: small;
+}
+figure[id="hva"] img{
   /* position: absolute;
   left: 0;
   top: 3rem; */
-  margin: 0 0 0 -1.4rem;
+  xmargin: 1.2rem 0 0 -2rem;
   width: 16rem;
+  vertical-align: top; /* voor de inline-block, boven uitlijnen */
 }
 
 /*
