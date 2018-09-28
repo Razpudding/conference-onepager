@@ -23,7 +23,6 @@ main{
 header, section, footer{
   min-height:100vh;
   width: 100%;
-  overflow-x: scroll;
   margin: 0;
   padding:1em;
 }
@@ -31,7 +30,7 @@ a{
   color: black;
 }
 a.next{
-  display: block;
+  display: none;
   width: 8rem;
   margin: 2rem auto 0 auto;
   font-size: 0.85em;
@@ -96,6 +95,11 @@ header {
   background: var(--geel-main);
   color: black;
   overflow-x: hidden;
+  xdisplay: flex;
+  xflex-wrap: wrap;
+  xjustify-content: space-between;
+  xalign-items: flex-start;
+  xmax-width: 70em;
 }
 header h1{
   display: block;
@@ -113,33 +117,29 @@ header h1 a{
 }
 header p{
   display: inline-block;
-  max-width: 30rem;
+  vertical-align: top; /* voor de inline-block, boven uitlijnen */
+  max-width: 26rem;
   margin: 2rem 0 0 0.5rem;
   padding: 0.8rem;
-  vertical-align: top; /* voor de inline-block, boven uitlijnen */
 }
 figure{
     display: inline-block;
+    vertical-align: top; /* voor de inline-block, boven uitlijnen */
     margin: 3rem 0 0 0;
     text-align: center;
-    vertical-align: top; /* voor de inline-block, boven uitlijnen */
-}
-figure[id="eye"] img{
-  /* header img[title="eye"]{ */
-  max-width: 26rem;
-  padding: 0.2rem;
-  background: black;
 }
 figure figcaption {
   font-size: small;
 }
-figure[id="hva"] img{
-  /* position: absolute;
-  left: 0;
-  top: 3rem; */
-  xmargin: 1.2rem 0 0 -2rem;
-  width: 16rem;
-  vertical-align: top; /* voor de inline-block, boven uitlijnen */
+figure img[title="eye"]{
+  max-width: 26rem;
+  padding: 0.2rem;
+  background: black;
+}
+figure img[title="hva"]{
+  width: 14rem;
+  margin-top:1rem;
+  xvertical-align: top; /* voor de inline-block, boven uitlijnen */
 }
 
 /*
@@ -182,7 +182,7 @@ TALKS
 met 3keynotes
 */
 section#talks {
-  overflow-x: hidden;
+
 }
 section#talks ul{
   list-style: none;
@@ -246,9 +246,8 @@ section#programme table{
   margin: 1em;
   border-collapse: collapse;
 }
-section#programme table tr:first-of-type{
-  position: sticky;
-  top: 3rem;
+section#programme table thead th {
+  padding: 1rem 0;
 }
 section#programme table td{
   padding: 0.5rem;
@@ -275,10 +274,10 @@ footer {
 footer > p:first-of-type{
   color: white;
 }
-footer img{
+/* footer img{
   margin: 1rem 0;
   width: 16rem;
-}
+} */
 
 
 
@@ -375,5 +374,13 @@ en de header p iets smaller,anders is het zonde van de ruimte
     }
     section#programme table{
       margin: 1em 0;
+    }
+    section#programme table thead th {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 5rem;
+      padding: 1rem 0;
+      background: var(--geel-secundary);
+      xborder: solid 0.2rem var(--geel-secundary);
     }
 }
