@@ -25,6 +25,7 @@ header, section, footer{
   width: 100%;
   margin: 0;
   padding:1em;
+  overflow-x: hidden;
 }
 a{
   color: black;
@@ -125,8 +126,8 @@ header p{
 header img[title="surveillance"]{
   position: absolute;
   right: 0;
-  top: 6rem;
-  width: 6rem;
+  top: 4rem;
+  width: 5rem;
 }
 figure{
     display: inline-block;
@@ -363,6 +364,11 @@ en de header p iets smaller,anders is het zonde van de ruimte
     header p{
       margin: 1rem 0;
       padding: 0;
+    }
+    header img[title="surveillance"]{
+      right: 0;
+      top: 5rem;
+      width: 3.2rem;
     }
     section#talks li{
       max-width: 20rem;
