@@ -122,10 +122,16 @@ header p{
   margin: 2rem 0 0 0.5rem;
   padding: 0.8rem;
 }
+header img[title="surveillance"]{
+  position: absolute;
+  right: 0;
+  top: 6rem;
+  width: 6rem;
+}
 figure{
     display: inline-block;
     vertical-align: top; /* voor de inline-block, boven uitlijnen */
-    margin: 3rem 0 0 0;
+    margin: 3rem 1rem 0 0;
     text-align: center;
 }
 figure figcaption {
@@ -138,10 +144,12 @@ figure img[title="eye"]{
 }
 figure img[title="hva"]{
   width: 14rem;
-  margin-top:1rem;
-  xvertical-align: top; /* voor de inline-block, boven uitlijnen */
+  margin-top:0.5rem;
 }
-
+figure img[title="cmd"]{
+  width: 14rem;
+  margin-top:0.5rem;
+}
 /*
 Sections
 Met alle content
@@ -273,6 +281,9 @@ footer {
 }
 footer > p:first-of-type{
   color: white;
+}
+footer figure{
+  margin-right  : 2rem;
 }
 /* footer img{
   margin: 1rem 0;
