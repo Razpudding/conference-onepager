@@ -80,10 +80,16 @@ nav a{
   display: inline-block;
   margin: 0 0.6rem 0 0.6rem;
   padding:0.4rem 0.6rem;
-  background: #0DFF4D;
+  background:#0DFF4D;
   color: black;
   border-radius: 0.4rem;
   text-decoration: none;
+}
+
+#tickets:hover,
+#tickets:focus {
+  background:#FFF021;
+  outline: dotted #fff;
 }
 
 /* header
