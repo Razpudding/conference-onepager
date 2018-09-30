@@ -91,6 +91,11 @@ nav a{
   background:#FFF021;
   outline: dotted #fff;
 }
+a:hover,
+a:focus {
+  background:#FFF021;
+  color: #000;
+}
 
 /* header
 Met intro tekst over het congres,
@@ -165,7 +170,8 @@ venue en contact
 section:nth-child(odd){ background: var(--geel-main); }
 section:nth-child(even){ background: var(--geel-secundary);}
 
-section h2, footer h2{
+section h2,
+footer h2{
   display: block;
   margin: 6rem 0 0 0;
   padding: 0;
@@ -178,7 +184,8 @@ section h2, footer h2{
 /* eerste paragraaf met kader - cmd stylie */
 section:nth-child(odd) > p:first-of-type { color: var(--geel-main); }
 section:nth-child(even) > p:first-of-type { color: var(--geel-secundary);}
-section > p:first-of-type, footer > p:first-of-type{
+section > p:first-of-type,
+footer > p:first-of-type{
   display: inline-block;
   margin: -0.2rem 0 0 0.5rem;
   padding: 0.4rem;
@@ -304,7 +311,10 @@ spannings veld tussen digital design & ethics
 */
 
 /* dit is de div voor het extra font design */
-header h1::before, header h1::after, section h2::after, footer h2::after{
+header h1::before,
+header h1::after,
+section h2::after,
+footer h2::after{
   display:block;
   position: absolute;
   margin: -0.76em 0 0 0;
@@ -395,7 +405,7 @@ en de header p iets smaller,anders is het zonde van de ruimte
       margin: 1rem 0;
     }
     section#programme table{
-      margin: 1em 0;
+      margin: 1em -1em;
     }
     section#programme table thead th {
       position: -webkit-sticky;
