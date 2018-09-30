@@ -29,6 +29,11 @@ header, section, footer{
 a{
   color: black;
 }
+a:hover,
+a:focus {
+  background:#efefef;
+  color: #000;
+}
 a.next{
   display: none;
   width: 8rem;
@@ -91,11 +96,7 @@ nav a{
   background:#FFF021;
   outline: dotted #fff;
 }
-a:hover,
-a:focus {
-  background:#FFF021;
-  color: #000;
-}
+
 
 /* header
 Met intro tekst over het congres,
