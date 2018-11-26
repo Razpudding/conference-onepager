@@ -107,11 +107,6 @@ header {
   background: var(--geel-main);
   color: black;
   overflow-x: hidden;
-  xdisplay: flex;
-  xflex-wrap: wrap;
-  xjustify-content: space-between;
-  xalign-items: flex-start;
-  xmax-width: 70em;
 }
 header h1{
   display: block;
@@ -150,7 +145,7 @@ figure figcaption {
   font-size: small;
 }
 figure img[title="eye"]{
-  max-width: 26rem;
+  max-width: 24rem;
   padding: 0.2rem;
   background: black;
 }
@@ -259,6 +254,29 @@ section#workshops li{
   vertical-align: top;
   color: black;
 }
+section#workshops h3 {
+  margin: -1rem -1rem 0 -1rem;
+  padding: 1rem;
+  font-weight: normal;
+  letter-spacing: 0;
+  background:black;
+  color: var(--geel-main);
+}
+section#workshops h3 span{
+  display: block;
+}
+section#workshops h3 a{
+  font-weight: normal;
+  letter-spacing: 0;
+  color: var(--geel-main);
+}
+section#workshops h3 a:hover{
+  background: none;
+  color: var(--geel-main);
+}
+section#workshops h3 + p{
+  font-size: 0.8em;
+}
 
 /*
 PROGRAMMA
@@ -271,8 +289,9 @@ section#programme table{
   margin: 1em;
   border-collapse: collapse;
 }
-section#programme table thead th {
-  padding: 1rem 0;
+section#programme table thead {
+  /padding: 1rem 0;
+  border: none;
 }
 section#programme table td{
   padding: 0.5rem;
@@ -379,7 +398,26 @@ breakpoint voor smalste mobiele schermen
 de scheve talks layout beetje tweaken
 en de header p iets smaller,anders is het zonde van de ruimte
 */
-@media (max-width: 400px) {
+@media (max-width: 460px) {
+
+      section#programme div{
+        overflow-x: scroll;
+        margin: 0 -1rem;
+      }
+      section#programme table{
+        /margin: 1em -1em;
+      }
+      section#programme table thead th {
+        /position: -webkit-sticky;
+        /position: sticky;
+        /top: 5rem;
+        padding: 1rem 0;
+        background: var(--geel-secundary);
+        /border: solid 0.2rem var(--geel-secundary);
+      }
+}
+
+@media (max-width: 420px) {
     header p{
       margin: 1rem 0;
       padding: 0;
@@ -389,6 +427,11 @@ en de header p iets smaller,anders is het zonde van de ruimte
       top: 5rem;
       width: 3.2rem;
     }
+    figure img[title="eye"]{
+      width: 100%;
+      margin: 0;
+    }
+
     section#talks li{
       max-width: 20rem;
       margin: 0;
@@ -404,19 +447,31 @@ en de header p iets smaller,anders is het zonde van de ruimte
     }
     section#talks p{
       width: 16em;
+      /background: pink;
+    }
+
+    section#workshops ul{
+      display: block;
+      margin-top: 2rem;
     }
     section#workshops li{
-      margin: 1rem 0;
+      margin-bottom: 4rem;
+      padding: 0;
+      border: none;
     }
-    section#programme table{
-      margin: 1em -1em;
-    }
-    section#programme table thead th {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 5rem;
-      padding: 1rem 0;
-      background: var(--geel-secundary);
-      xborder: solid 0.2rem var(--geel-secundary);
-    }
+}
+@media (max-width: 349px) {
+  section#talks li{
+    max-width: 20rem;
+    margin: 0;
+  }
+  section#talks li img{
+    width: 16rem;
+    margin-left: 1rem;
+  }
+  section#talks li h3 {
+  }
+  section#talks p{
+
+  }
 }
